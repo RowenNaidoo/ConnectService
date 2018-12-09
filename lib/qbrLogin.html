@@ -15,13 +15,6 @@
     var nomineeId = urlParams.get('nomineeId');
     var redirectUrl = urlParams.get('redirectUrl');
 
-    function setup() {
-      var urlParams = new URLSearchParams(window.location.search);
-      var qffNo = urlParams.get('qffNo');
-      var nomineeId = urlParams.get('nomineeId');
-      var redirectUrl = urlParams.get('redirectUrl');
-    }
-
     function linkAndRedirect() {
       console.log(qffNo);
       var url;
@@ -48,7 +41,10 @@
         referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       })
-        .then(response => window.location = redirectUrl);
+        .then((response) => {
+          console.log(response);
+          //window.location = redirectUrl;
+        });
     }
   </script>
 </body>
