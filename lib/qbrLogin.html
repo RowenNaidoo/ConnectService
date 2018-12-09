@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body onload="test()">
+  this is the login page!
+
+  <script>
+    function test() {
+      var urlParams = new URLSearchParams(window.location.search);
+      console.log(urlParams.get('qffNo'));
+    }
+  </script>
+</body>
+
+</html>

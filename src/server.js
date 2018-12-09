@@ -1,6 +1,7 @@
 //Dependencies
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
 
 import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee } from './service';
 
@@ -56,6 +57,10 @@ router.post('/disconnectNominees', (request, response) => {
 router.post('/resetData', (request, response) => {
     resetData();
     response.send(200);
+});
+
+router.get('/qbrLogin', (request, response) => {
+    response.sendFile(path.join(__dirname + '/qbrLogin.html'));
 });
 
 // all routes will be prefixed with /api
