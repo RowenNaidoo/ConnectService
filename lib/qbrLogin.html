@@ -4,11 +4,20 @@
 <head>
 </head>
 
-<body onload="test()">
+<body onload="setup()">
   <span id="output">Linking accounts</span>
+  <input type="button" value="Link and redirect" onclick="linkAndRedirect" />
 
   <script>
-    function makeLinkRequest(qffNo, nomineeId, redirectUrl) {
+    function setup() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var qffNo = urlParams.get('qffNo');
+      var nomineeId = urlParams.get('nomineeId');
+      var redirectUrl = urlParams.get('redirectUrl');
+    }
+
+    function linkAndRedirect() {
+      console.log(qffNo);
       var url;
       var data;
 
@@ -34,15 +43,6 @@
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       })
         .then(response => window.location = redirectUrl);
-    }
-
-    function test() {
-      var urlParams = new URLSearchParams(window.location.search);
-      var qffNo = urlParams.get('qffNo');
-      var nomineeId = urlParams.get('nomineeId');
-      var redirectUrl = urlParams.get('redirectUrl');
-
-      makeLinkRequest(qffNo, nomineeId, redirectUrl);
     }
   </script>
 </body>
