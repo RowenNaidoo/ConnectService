@@ -8,7 +8,7 @@
   <span id="output">Linking accounts</span>
 
   <script>
-    function makeLinkRequest(qffNo, nomineeId) {
+    function makeLinkRequest(qffNo, nomineeId, redirectUrl) {
       var url;
       var data;
 
@@ -33,13 +33,14 @@
         referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       })
-        .then(response => console.log(response));
+        .then(response => window.location.replace(redirectUrl));
     }
 
     function test() {
       var urlParams = new URLSearchParams(window.location.search);
       var qffNo = urlParams.get('qffNo');
       var nomineeId = urlParams.get('nomineeId');
+      var redirectUrl = urlParams.get('redirectUrl');
 
       makeLinkRequest(qffNo, nomineeId);
     }
