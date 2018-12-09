@@ -33,7 +33,7 @@
         referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       })
-        .then(response => window.location.href(redirectUrl));
+        .then(response => window.location.href = redirectUrl);
     }
 
     function test() {
