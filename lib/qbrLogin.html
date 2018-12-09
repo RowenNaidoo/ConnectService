@@ -5,12 +5,43 @@
 </head>
 
 <body onload="test()">
-  this is the login page!
+  <span id="output">Linking accounts</span>
 
   <script>
+    function makeLinkRequest(qffNo, nomineeId) {
+      var url;
+      var data;
+
+      if (nomineeId) {
+        url = 'https://connservice.herokuapp.com/api/connectNominee'
+        data = { qffNo: qffNo, nomineeId: nomineeId }
+      } else {
+        url = 'https://connservice.herokuapp.com/api/connectNominees'
+        data = { qffNo: qffNo }
+      }
+
+      fetch(url, {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, cors, *same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "same-origin", // include, *same-origin, omit
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+          // "Content-Type": "application/x-www-form-urlencoded",
+        },
+        redirect: "follow", // manual, *follow, error
+        referrer: "no-referrer", // no-referrer, *client
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+      })
+        .then(response => response.json());
+    }
+
     function test() {
       var urlParams = new URLSearchParams(window.location.search);
-      console.log(urlParams.get('qffNo'));
+      var qffNo = urlParams.get('qffNo');
+      var nomineeId = urlParams.get('nomineeId');
+
+      makeLinkRequest(qffNo, nomineeId);
     }
   </script>
 </body>

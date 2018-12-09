@@ -30,6 +30,16 @@ router.post('/addNominee', (request, response) => {
     response.sendStatus(200);
 });
 
+router.post('/disconnectNominees', (request, response) => {
+    disconnectNominees(request.body.qffNo);
+    response.send(200);
+});
+
+router.post('/resetData', (request, response) => {
+    resetData();
+    response.send(200);
+});
+
 router.post('/getNominees', (request, response) => {
     response.send(getNominees(request.body.qffNo));
 });
@@ -46,16 +56,6 @@ router.post('/connectNominee', (request, response) => {
 
 router.post('/disconnectNominee', (request, response) => {
     disconnectNominee(request.body.qffNo, request.body.nomineeId);
-    response.send(200);
-});
-
-router.post('/disconnectNominees', (request, response) => {
-    disconnectNominees(request.body.qffNo);
-    response.send(200);
-});
-
-router.post('/resetData', (request, response) => {
-    resetData();
     response.send(200);
 });
 
