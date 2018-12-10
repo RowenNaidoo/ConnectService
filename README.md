@@ -46,15 +46,17 @@
  <details>
    <summary>/api/disconnectNominee</summary>
    <p>
-   Disconnects nominee from qff number
+      <ul>
+         <li>Disconnects nominee from qff number</li>
       
-   Input:
+   <li>Input:
    {
       "qffNo": integer,
       "nomineeId": integer
-   }
+   }</li>
       
-   Output:
-   Status code
+   <li>Output:
+   Status code</li>
+   </ul>
   </p>
  </details>
