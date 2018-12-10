@@ -2,7 +2,7 @@
 
 ## Endpoints ##
 <details>
-   <summary>/getNominees</summary>
+   <summary>/api/getNominees</summary>
    <p>
    Retrieves a list of connected nominees by qff number
       
@@ -25,7 +25,7 @@
  </details>
  
  <details>
-   <summary>/connectNominee</summary>
+   <summary>/api/connectNominee</summary>
    <p>
    Connects nominee to qff number
       
@@ -41,7 +41,7 @@
  </details>
  
  <details>
-   <summary>/disconnectNominee</summary>
+   <summary>/api/disconnectNominee</summary>
    <p>
    Disconnects nominee from qff number
       
