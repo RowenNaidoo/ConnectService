@@ -129,3 +129,20 @@
    </ul>
   </p>
  </details>
+ 
+ <details>
+   <summary>/api/disconnectNominees</summary>
+   <p>
+   <ul>
+      <li>Disconnects all nominees for qffNo</li>
+      
+   <li>Input: 
+      {
+           qffNo: integer
+       }
+      
+   <li>Output: Staus code</li>
+   </ul>
+  </p>
+ </details>
+
