@@ -96,3 +96,36 @@
    </ul>
   </p>
  </details>
+ 
+ <details>
+   <summary>/api/resetData</summary>
+   <p>
+   <ul>
+      <li>Resets DB to original state</li>
+      
+   <li>Input:none
+      
+   <li>Output: Status code</li>
+   </ul>
+  </p>
+ </details>
+ 
+ <details>
+   <summary>/api/addNominee</summary>
+   <p>
+   <ul>
+      <li>Adds a nominee to DB</li>
+      
+   <li>Input: 
+      {
+           nomineeId: integer,
+           nomineeName: String,
+           points: integer,
+           qffNo: integer,
+           isConnected: boolean
+       }
+      
+   <li>Output: Staus code</li>
+   </ul>
+  </p>
+ </details>
