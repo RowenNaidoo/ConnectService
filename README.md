@@ -30,16 +30,15 @@
    <summary>/api/connectNominee</summary>
    <p>
       <ul>
-         <li>Connects nominee to qff number</li>
-      
+         <li>Connects nominee to qff number</li>      
          <li>Input: 
          { 
             "qffNo": integer, 
             "nomineeId": integer 
-         }
+         }</li>         
+         <li>
+            Output: Status code
          </li>
-      
-         <li>Output: Status code</li>
    </ul>
   </p>
  </details>
