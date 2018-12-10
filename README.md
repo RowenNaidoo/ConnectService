@@ -73,3 +73,26 @@
    </ul>
   </p>
  </details>
+ 
+ ## Helper Endpoints ##
+<details>
+   <summary>/api/getAllData</summary>
+   <p>
+   <ul>
+      <li>Retrieves a list of all nominees in DB</li>
+      
+   <li>Input:none
+      
+   <li>Output:
+   [
+      {
+           nomineeId: integer,
+           nomineeName: String,
+           points: integer,
+           qffNo: integer,
+           isConnected: boolean
+       }
+   ]</li>
+   </ul>
+  </p>
+ </details>
