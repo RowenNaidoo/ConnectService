@@ -28,7 +28,7 @@
         data = { qffNo: qffNo }
       }
 
-      fetch(url, {
+      const fetchData = {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, cors, *same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -40,10 +40,15 @@
         redirect: "follow", // manual, *follow, error
         referrer: "no-referrer", // no-referrer, *client
         body: JSON.stringify(data), // body data type must match "Content-Type" header
-      })
+      };
+
+      fetch(url, fetchData)
         .then((response) => {
-          console.log(response);
+          console.log('success', response);
           //window.location = redirectUrl;
+        })
+        .catch(function (error) {
+          console.log('error', error);
         });
     }
   </script>
