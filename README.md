@@ -1,6 +1,6 @@
 # ConnectService
 
 ## Endpoints ##
-### /getNominees ###
-Retrieves a list of linked nominees
-#### Input ####
+  ### /getNominees ###
+  Retrieves a list of linked nominees
+  #### Input ####
