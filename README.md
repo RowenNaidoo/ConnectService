@@ -4,7 +4,7 @@
 <details>
    <summary>/api/getNominees</summary>
    <p>
-   Retrieves a list of connected nominees by qff number
+   >> Retrieves a list of connected nominees by qff number
       
    Input:
    {
