@@ -44,6 +44,22 @@
  </details>
  
  <details>
+   <summary>/api/connectNominees</summary>
+   <p>
+      <ul>
+         <li>Connects all dentified nominees to qff number</li>      
+         <li>Input: 
+         { 
+            "qffNo": integer
+         }</li>         
+         <li>
+            Output: Status code
+         </li>
+   </ul>
+  </p>
+ </details>
+ 
+ <details>
    <summary>/api/disconnectNominee</summary>
    <p>
       <ul>
