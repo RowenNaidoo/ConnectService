@@ -60,3 +60,16 @@
    </ul>
   </p>
  </details>
+ 
+ <details>
+   <summary>/api/qbrLogin</summary>
+   <p>
+      <ul>
+         <li>Displays QBR login page</li>      
+         <li>Input: /api/qbrLogin?qffNo=1234567890&nomineeId=987654321&redirectUrl=http://www.google.com.au</li>         
+         <li>
+            Output: QBR login page
+         </li>
+   </ul>
+  </p>
+ </details>
