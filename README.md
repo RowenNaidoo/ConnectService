@@ -2,7 +2,7 @@
 
 ## Endpoints ##
 <details>
-   <summary>/api/getNominees</summary>
+   <summary>/api/getNominees [get]</summary>
    <p>
    <ul>
       <li>Retrieves a list of connected nominees by qff number</li>
@@ -27,7 +27,7 @@
  </details>
  
  <details>
-   <summary>/api/connectNominee</summary>
+   <summary>/api/connectNominee [post]</summary>
    <p>
       <ul>
          <li>Connects nominee to qff number</li>      
@@ -44,7 +44,7 @@
  </details>
  
  <details>
-   <summary>/api/connectNominees</summary>
+   <summary>/api/connectNominees [post]</summary>
    <p>
       <ul>
          <li>Connects all dentified nominees to qff number</li>      
@@ -60,7 +60,7 @@
  </details>
  
  <details>
-   <summary>/api/disconnectNominee</summary>
+   <summary>/api/disconnectNominee [post]</summary>
    <p>
       <ul>
          <li>Disconnects nominee from qff number</li>
@@ -78,7 +78,7 @@
  </details>
  
  <details>
-   <summary>/api/qbrLogin</summary>
+   <summary>/api/qbrLogin [get]</summary>
    <p>
       <ul>
          <li>Displays QBR login page</li>      
@@ -92,7 +92,7 @@
  
  ## Helper Endpoints ##
 <details>
-   <summary>/api/getAllData</summary>
+   <summary>/api/getAllData [get]</summary>
    <p>
    <ul>
       <li>Retrieves a list of all nominees in DB</li>
@@ -114,7 +114,7 @@
  </details>
  
  <details>
-   <summary>/api/resetData</summary>
+   <summary>/api/resetData [post]</summary>
    <p>
    <ul>
       <li>Resets DB to original state</li>
@@ -127,7 +127,7 @@
  </details>
  
  <details>
-   <summary>/api/addNominee</summary>
+   <summary>/api/addNominee [post]</summary>
    <p>
    <ul>
       <li>Adds a nominee to DB</li>
@@ -147,7 +147,7 @@
  </details>
  
  <details>
-   <summary>/api/disconnectNominees</summary>
+   <summary>/api/disconnectNominees [post]</summary>
    <p>
    <ul>
       <li>Disconnects all nominees for qffNo</li>
