@@ -32,7 +32,12 @@
       <ul>
          <li>Connects nominee to qff number</li>
       
-         <li>Input: { "qffNo": integer, "nomineeId": integer }</li>
+         <li>Input: 
+         { 
+            "qffNo": integer, 
+            "nomineeId": integer 
+         }
+         </li>
       
          <li>Output: Status code</li>
    </ul>
