@@ -6,14 +6,13 @@
    <p>
    <ul>
       <li>Retrieves a list of connected nominees by qff number</li>
-   </ul>
       
-   Input:
+   <li>Input:
    {
       "qffNo": integer
-   }
+   }</li>
       
-   Output:
+   <li>Output:
    [
       {
            nomineeId: integer,
@@ -22,7 +21,8 @@
            qffNo: integer,
            isConnected: boolean
        }
-   ]
+   ]</li>
+   </ul>
   </p>
  </details>
  
