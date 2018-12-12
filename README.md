@@ -1,5 +1,7 @@
 # ConnectService
 
+## Base URL: ## https://connservice.herokuapp.com/api
+
 ## Endpoints ##
 <details>
    <summary>/api/getNominees [get]</summary>
