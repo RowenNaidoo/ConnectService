@@ -1,6 +1,6 @@
 # ConnectService
 
-## Base URL: ## https://connservice.herokuapp.com/api
+## Base URL: https://connservice.herokuapp.com
 
 ## Endpoints ##
 <details>
