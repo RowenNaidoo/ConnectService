@@ -15,23 +15,6 @@
  </details>
 
  <details>
-   <summary>/api/connectNominee [post]</summary>
-   <p>
-      <ul>
-         <li>Connects nominee to qff number</li>
-         <li>Input:
-         {
-            "qffNo": string,
-            "nomineeId": string
-         }</li>
-         <li>
-            Output: Status code
-         </li>
-   </ul>
-  </p>
- </details>
-
- <details>
    <summary>/api/related-accounts [get]</summary>
    <p>
       <ul>
@@ -83,6 +66,23 @@
  </details>
 
  ## Helper Endpoints ##
+
+<details>
+<summary>/api/connectNominee [post]</summary>
+<p>
+   <ul>
+      <li>Connects nominee to qff number</li>
+      <li>Input:
+      {
+         "qffNo": string,
+         "nomineeId": string
+      }</li>
+      <li>
+         Output: Status code
+      </li>
+</ul>
+</p>
+</details>
 <details>
    <summary>/api/getAllData [get]</summary>
    <p>
