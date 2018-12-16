@@ -3,7 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
 
-import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee } from './service';
+import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt } from './service';
 
 //Declarations
 const app = express();
@@ -44,6 +44,11 @@ router.post('/getNominees', (request, response) => {
     response.send(getNominees(request.body.qffNo));
 });
 
+router.post('/set-connection-prompt', (request, response) => {
+    setConectionPrompt(request.body.showConnectionPrompt);
+    response.send(200);
+});
+
 router.post('/connectNominees', (request, response) => {
     connectNominees(request.body.qffNo);
     response.send(200);
@@ -54,8 +59,18 @@ router.post('/connectNominee', (request, response) => {
     response.send(200);
 });
 
-router.post('/disconnectNominee', (request, response) => {
-    disconnectNominee(request.body.qffNo, request.body.nomineeId);
+router.get('/connection-prompt', (request, response) => {
+    getConnectionPrompt()
+        ? response.send(200)
+        : response.send(404)
+});
+
+router.get('/related-accounts', (request, response) => {
+    response.send(getNominees(request.query.qffNo, request.query.connectionType))
+});
+
+router.delete('/connections/:qffNo/:nomineeId', (request, response) => {
+    disconnectNominee(request.params.qffNo, request.params.nomineeId);
     response.send(200);
 });
 

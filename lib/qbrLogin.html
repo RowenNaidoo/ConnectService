@@ -22,10 +22,10 @@
 
       if (nomineeId) {
         url = 'https://connservice.herokuapp.com/api/connectNominee'
-        data = { qffNo: parseInt(qffNo), nomineeId: nomineeId }
+        data = { qffNo: qffNo, nomineeId: nomineeId }
       } else {
         url = 'https://connservice.herokuapp.com/api/connectNominees'
-        data = { qffNo: parseInt(qffNo) }
+        data = { qffNo: qffNo }
       }
 
       const fetchData = {
