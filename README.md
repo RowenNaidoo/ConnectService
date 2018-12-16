@@ -68,6 +68,21 @@
  ## Helper Endpoints ##
 
 <details>
+<summary>/v1/set-connection-prompt [post]</summary>
+<p>
+   <ul>
+      <li>Sets show connection prompt to true or false</li>
+      <li>Input:
+      {
+         "showConnectionPrompt": boolean
+      }</li>
+      <li>
+         Output: Status code
+      </li>
+</ul>
+</p>
+</details>
+<details>
 <summary>/v1/connectNominee [post]</summary>
 <p>
    <ul>
