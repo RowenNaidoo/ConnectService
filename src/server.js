@@ -79,7 +79,7 @@ router.get('/qbrLogin', (request, response) => {
 });
 
 // all routes will be prefixed with /api
-app.use('/api', router);
+app.use('/v1', router);
 
 //start server
 app.listen(port);
