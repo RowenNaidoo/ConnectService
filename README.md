@@ -4,7 +4,7 @@
 
 ## Endpoints ##
 <details>
-   <summary>/api/connection-prompt [get]</summary>
+   <summary>/v1/connection-prompt [get]</summary>
    <p>
    <ul>
       <li>Indicates if the user should be promted to connect</li>
@@ -15,7 +15,7 @@
  </details>
 
  <details>
-   <summary>/api/related-accounts [get]</summary>
+   <summary>/v1/related-accounts [get]</summary>
    <p>
       <ul>
          <li>Returns a list of connected accounts sorted alphabetically by business name</li>
@@ -41,7 +41,7 @@
  </details>
 
  <details>
-   <summary>/api/connections/:qffNo/:nomineeId [delete]</summary>
+   <summary>/v1/connections/:qffNo/:nomineeId [delete]</summary>
    <p>
       <ul>
          <li>Removes the specified connection</li>
@@ -53,11 +53,11 @@
  </details>
 
  <details>
-   <summary>/api/qbrLogin [get]</summary>
+   <summary>/v1/qbrLogin [get]</summary>
    <p>
       <ul>
          <li>Displays QBR login page</li>
-         <li>Input: /api/qbrLogin?qffNo=1234567890&nomineeId=987654321&redirectUrl=http://www.google.com.au</li>
+         <li>Input: /v1/qbrLogin?qffNo=1234567890&nomineeId=987654321&redirectUrl=http://www.google.com.au</li>
          <li>
             Output: QBR login page
          </li>
@@ -68,7 +68,7 @@
  ## Helper Endpoints ##
 
 <details>
-<summary>/api/connectNominee [post]</summary>
+<summary>/v1/connectNominee [post]</summary>
 <p>
    <ul>
       <li>Connects nominee to qff number</li>
@@ -84,7 +84,7 @@
 </p>
 </details>
 <details>
-   <summary>/api/getAllData [get]</summary>
+   <summary>/v1/getAllData [get]</summary>
    <p>
    <ul>
       <li>Retrieves a list of all nominees in DB</li>
@@ -110,7 +110,7 @@
  </details>
 
  <details>
-   <summary>/api/resetData [post]</summary>
+   <summary>/v1/resetData [post]</summary>
    <p>
    <ul>
       <li>Resets DB to original state</li>
@@ -123,7 +123,7 @@
  </details>
 
  <details>
-   <summary>/api/addNominee [post]</summary>
+   <summary>/v1/addNominee [post]</summary>
    <p>
    <ul>
       <li>Adds a nominee to DB</li>
@@ -147,7 +147,7 @@
  </details>
 
  <details>
-   <summary>/api/disconnectNominees [post]</summary>
+   <summary>/v1/disconnectNominees [post]</summary>
    <p>
    <ul>
       <li>Disconnects all nominees for qffNo</li>
