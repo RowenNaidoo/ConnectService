@@ -2,6 +2,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import path from 'path';
+import cors from 'cors';
 
 import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt } from './service';
 
@@ -13,6 +14,7 @@ app.disable('etag').disable('x-powered-by');
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 //get port
 const port = process.env.PORT || 3000;
