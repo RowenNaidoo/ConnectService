@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import cors from 'cors';
 
-import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt } from './service';
+import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt, getNomineesByQffNo } from './service';
 
 //Declarations
 const app = express();
@@ -68,7 +68,10 @@ router.get('/connection-prompt', (request, response) => {
 });
 
 router.get('/related-accounts', (request, response) => {
-    response.send(getNominees(request.query.qffNo, request.query.connectionType))
+    const result = request.query.connectionType
+        ? getNominees(request.query.qffNo, request.query.connectionType)
+        : getNomineesByQffNo(request.query.qffNo);
+    response.send(result);
 });
 
 router.delete('/connections/:qffNo/:nomineeId', (request, response) => {

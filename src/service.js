@@ -13,11 +13,15 @@ export const addNominee = (nominee) => {
 }
 
 export const getNominees = (qffNo, connectionType) => {
-    const x = nomineeData.filter(n => (
+    return nomineeData.filter(n => (
         n.qffNo === qffNo && n.type === connectionType
     ));
-    console.log(x);
-    return x;
+}
+
+export const getNomineesByQffNo = (qffNo) => {
+    return nomineeData.filter(n => (
+        n.qffNo === qffNo
+    ));
 }
 
 export const connectNominees = (qffNo) => {
