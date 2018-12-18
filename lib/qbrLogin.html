@@ -21,10 +21,10 @@
       var data;
 
       if (nomineeId) {
-        url = 'https://connservice.herokuapp.com/api/connectNominee'
+        url = 'https://connservice.herokuapp.com/v1/connectNominee'
         data = { qffNo: qffNo, nomineeId: nomineeId }
       } else {
-        url = 'https://connservice.herokuapp.com/api/connectNominees'
+        url = 'https://connservice.herokuapp.com/v1/connectNominees'
         data = { qffNo: qffNo }
       }
 
