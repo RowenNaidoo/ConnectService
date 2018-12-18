@@ -27,7 +27,7 @@ export const getNomineesByQffNo = (qffNo) => {
 export const connectNominees = (qffNo) => {
     nomineeData = nomineeData.map(n => {
         if (n.qffNo === qffNo) {
-            n.isConnected = true;
+            n.type = "connection";
         }
         return n;
     });
@@ -36,7 +36,7 @@ export const connectNominees = (qffNo) => {
 export const disconnectNominees = (qffNo) => {
     nomineeData = nomineeData.map(n => {
         if (n.qffNo === qffNo) {
-            n.isConnected = false;
+            n.type = "association";
         }
         return n;
     });
@@ -49,7 +49,7 @@ export const resetData = () => {
 export const connectNominee = (qffNo, nomineeId) => {
     nomineeData = nomineeData.map(n => {
         if (n.qffNo === qffNo && n.nomineeId === nomineeId) {
-            n.isConnected = true;
+            n.type = "connection";
         }
         return n;
     })
@@ -58,7 +58,7 @@ export const connectNominee = (qffNo, nomineeId) => {
 export const disconnectNominee = (qffNo, nomineeId) => {
     nomineeData = nomineeData.map(n => {
         if (n.qffNo === qffNo && n.nomineeId === nomineeId) {
-            n.isConnected = false;
+            n.type = "association";
         }
         return n;
     })
