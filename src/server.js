@@ -68,14 +68,14 @@ router.get('/connection-prompt', (request, response) => {
 });
 
 router.get('/related-accounts', (request, response) => {
-    const result = request.query.connectionType
-        ? getNominees(request.query.qffNo, request.query.connectionType)
-        : getNomineesByQffNo(request.query.qffNo);
+    const result = request.query.relationType
+        ? getNominees(request.query.qffMemberId, request.query.relationType)
+        : getNomineesByQffNo(request.query.qffMemberId);
     response.send(result);
 });
 
-router.delete('/connections/:qffNo/:nomineeId', (request, response) => {
-    disconnectNominee(request.params.qffNo, request.params.nomineeId);
+router.delete('/connections/:connectionId', (request, response) => {
+    disconnectNominee(request.params.connectionId);
     response.send(200);
 });
 
