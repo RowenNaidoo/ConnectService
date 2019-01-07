@@ -145,16 +145,26 @@
 
    <li>Input:
       {
-         businessName: string,
-         firstName: string,
-         lastName: string,
-         type: string, //association, connection
-         nomineeId: string,
-         emailAddress: string,
-         points: integer,
-         level: integer,
-         qffNo: string
-      }
+  "relationType": "association",
+  qffNo: 912345678
+  "account": {
+	"qbrMember": {
+	  "businessName": "My First Business"
+	},
+	"nominee": {
+	  "nomineeId": 101,
+	  "firstName": "First",
+	  "lastName": "Business"
+	}
+  },
+  "links": [
+	{
+	  "href": "https://connservice.herokuapp.com/v1/qbrLogin?qffNo=912345678&nomineeId=101",
+	  "rel": "connect",
+	  "method": "GET"
+	}
+  ]
+}
 
    <li>Output: Staus code</li>
    </ul>
