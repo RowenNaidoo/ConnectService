@@ -146,7 +146,7 @@
    <li>Input:
       {
   "relationType": "association",
-  qffNo: 912345678
+  "qffNo": 912345678,
   "account": {
 	"qbrMember": {
 	  "businessName": "My First Business"
