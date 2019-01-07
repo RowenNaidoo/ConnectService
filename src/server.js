@@ -71,7 +71,7 @@ router.get('/related-accounts', (request, response) => {
     const result = request.query.relationType
         ? getNominees(parseInt(request.query.qffMemberId), request.query.relationType)
         : getNomineesByQffNo(parseInt(request.query.qffMemberId));
-    response.send(result);
+    response.send({ "related-accounts": result });
 });
 
 router.delete('/connections/:connectionId', (request, response) => {
