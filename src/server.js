@@ -69,8 +69,8 @@ router.get('/connection-prompt', (request, response) => {
 
 router.get('/related-accounts', (request, response) => {
     const result = request.query.relationType
-        ? getNominees(request.query.qffMemberId, request.query.relationType)
-        : getNomineesByQffNo(request.query.qffMemberId);
+        ? getNominees(parseInt(request.query.qffMemberId), request.query.relationType)
+        : getNomineesByQffNo(parseInt(request.query.qffMemberId));
     response.send(result);
 });
 
