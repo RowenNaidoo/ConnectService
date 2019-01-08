@@ -128,7 +128,7 @@
    <summary>/v1/resetData [post]</summary>
    <p>
    <ul>
-      <li>Resets DB to original state</li>
+      <li>Use with caution!! Resets DB to original state</li>
 
    <li>Input:none
 
