@@ -19,7 +19,7 @@
    <p>
       <ul>
          <li>Returns a list of connected accounts sorted alphabetically by business name</li>
-         <li>Input: ?connectionType=[association/connection]&qffNo=[1234567890]</li>
+         <li>Input: ?relationType=[connection]&qffMemberId=[1234567890]</li>
          <li>
             Output:
             [
@@ -41,10 +41,10 @@
  </details>
 
  <details>
-   <summary>/v1/connections/:qffNo/:nomineeId [delete]</summary>
+   <summary>/v1/connections/:connectionId [delete]</summary>
    <p>
       <ul>
-         <li>Removes the specified connection</li>
+         <li>Removes the specified connection i.e. Changes the relation type from a connection to an association</li>
 
    <li>Output:
    Status code</li>
