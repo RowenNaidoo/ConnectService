@@ -9,6 +9,18 @@ export const getAllData = () => {
     return nomineeData;
 }
 
+export const canAddNominee = (nominee) => {
+    let result = true;
+
+    nomineeData.forEach(n => {
+        if (n.account.nominee.nomineeId === nominee.account.nominee.nomineeId) {
+            result = false;
+        }
+    });
+
+    return result;
+}
+
 export const addNominee = (nominee) => {
     nomineeData.push(nominee);
 }
@@ -78,11 +90,11 @@ export const setConectionPrompt = (value) => {
 }
 
 const addConnectLink = (qffNo, nomineeId) => (
-    {
+    [{
         "href": `https://connservice.herokuapp.com/v1/qbrLogin?qffNo=${qffNo}&nomineeId=${nomineeId}`,
         "rel": "connect",
         "method": "GET"
-    }
+    }]
 )
 
 const convertConnectionToAssociation = (relation) => {
@@ -98,8 +110,8 @@ const convertConnectionToAssociation = (relation) => {
 const convertAssociationToConnection = (association, connectionIdSeed) => {
     association.relationType = "connection";
     association.connectionId = connectionIdSeed;
-    association.account.qbrMember.points = 1000;
-    association.account.qbrMember.level = 1;
+    if (!association.account.qbrMember.points) { association.account.qbrMember.points = 1000; }
+    if (!association.account.qbrMember.level) { association.account.qbrMember.level = 1; }
     association.account.nominee.emailAddress = `business${connectionIdSeed}@gmail.com`;
     association.links = [
         {

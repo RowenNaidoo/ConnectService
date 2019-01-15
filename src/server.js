@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import cors from 'cors';
 
-import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt, getNomineesByQffNo } from './service';
+import { getAllData, addNominee, getNominees, connectNominees, disconnectNominees, resetData, connectNominee, disconnectNominee, getConnectionPrompt, setConectionPrompt, getNomineesByQffNo, canAddNominee } from './service';
 
 //Declarations
 const app = express();
@@ -28,8 +28,12 @@ router.get('/getAllData', (request, response) => {
 });
 
 router.post('/addNominee', (request, response) => {
-    addNominee(request.body);
-    response.sendStatus(200);
+    if (canAddNominee(request.body)) {
+        addNominee(request.body);
+        response.sendStatus(200);
+    } else {
+        response.send(400, 'nomineeId already exists');
+    }
 });
 
 router.post('/disconnectNominees', (request, response) => {
